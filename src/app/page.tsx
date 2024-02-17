@@ -12,12 +12,12 @@ export default function Home() {
         height={24}
         priority
       />
-      <Button variant={"default"}>DARK COLONY</Button>
-      <Button variant={"destructive"}>DARK COLONY</Button>
-      <Button variant={"outline"}>DARK COLONY</Button>
-      <Button variant={"secondary"}>DARK COLONY</Button>
+      <Button variant={"default"}>RED LANDING</Button>
+      <Button variant={"destructive"}>RED LANDING</Button>
+      <Button variant={"outline"}>RED LANDING</Button>
+      <Button variant={"secondary"}>RED LANDING</Button>
       <Button variant={"darkButton"} size={"darkButton"}>
-        DARK COLONY
+        RED LANDING
       </Button>
     </main>
   );
