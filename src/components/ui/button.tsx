@@ -22,7 +22,7 @@ const buttonVariants = cva(
           "hover:bg-gray-100 hover:text-gray-900 dark:hover:bg-gray-800 dark:hover:text-gray-50",
         link: "text-gray-900 underline-offset-4 hover:underline dark:text-gray-50",
         darkButton:
-          "outline outline-red-900 bg-black text-red-900 rounded-sm py-1 h-6 leading-none -outline-offset-2 hover:bg-gray-900/90 ",
+          "outline outline-1 outline-red-900 bg-black text-red-900 rounded-sm py-1 h-6 leading-none -outline-offset-2 hover:bg-gray-900/90 hover:outline-red-600 hover:text-red-600",
       },
       size: {
         default: "h-10 px-4 py-2",

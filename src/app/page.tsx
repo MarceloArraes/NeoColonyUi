@@ -1,7 +1,11 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 export default function Home() {
+  const goToAlert = () => {
+    window.location.href = "/alert";
+  };
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <Image
@@ -16,7 +20,7 @@ export default function Home() {
       <Button variant={"destructive"}>RED LANDING</Button>
       <Button variant={"outline"}>RED LANDING</Button>
       <Button variant={"secondary"}>RED LANDING</Button>
-      <Button variant={"darkButton"} size={"darkButton"}>
+      <Button variant={"darkButton"} onClick={goToAlert} size={"darkButton"}>
         RED LANDING
       </Button>
     </main>
