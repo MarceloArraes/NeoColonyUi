@@ -10,8 +10,8 @@ export const MenuBox = ({ children, className }: MenuBoxProps) => {
     <div className="bg-stone-600">
       <div
         className={
-          className +
-          `bg-black border-[1px] border-stone-400 
+          
+          `${className} bg-black border-[1px] border-stone-400 
         -border-offset-2 justify-center items-center text-center
          border-l-stone-400`
         }

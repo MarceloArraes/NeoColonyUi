@@ -1,6 +1,7 @@
 import { MenuBox } from "@/components/MenuBox";
 import { TextBlock } from "@/components/TextBlock";
 import { Button } from "@/components/ui/button";
+import {ScrollBox} from '@/components/ScrollBox'
 import Image from "next/image";
 import React from "react";
 
@@ -28,6 +29,7 @@ const Menu = () => {
               <div className="text-xs">LEUT. Rank</div>
             </div>
             <TextBlock>RED LANDING</TextBlock>
+            <ScrollBox className="max-h-56">
             <p className="text-sm mb-4">
               ...DOWNLOADING TRANSMISSION...
               <br />
@@ -43,6 +45,37 @@ const Menu = () => {
               There is no time to lose. We are sending you and a small team of
               TROOPERS to find out what has happened.
             </p>
+            <p className="text-sm mb-4">
+              ...DOWNLOADING TRANSMISSION...
+              <br />
+              Welcome to MARS, COMMANDER.
+              <br />
+              <br />
+              We have just received a distress call from one of our MINING
+              COLONIES deep in the CHRYSE BASIN. The message was very broken up,
+              but as we understand it, the COLONY is under attack by those damn
+              ALIENS!
+              <br />
+              <br />
+              There is no time to lose. We are sending you and a small team of
+              TROOPERS to find out what has happened.
+            </p>
+            <p className="text-sm mb-4">
+              ...DOWNLOADING TRANSMISSION...
+              <br />
+              Welcome to MARS, COMMANDER.
+              <br />
+              <br />
+              We have just received a distress call from one of our MINING
+              COLONIES deep in the CHRYSE BASIN. The message was very broken up,
+              but as we understand it, the COLONY is under attack by those damn
+              ALIENS!
+              <br />
+              <br />
+              There is no time to lose. We are sending you and a small team of
+              TROOPERS to find out what has happened.
+            </p>
+            </ScrollBox>
           </div>
           {/* right side */}
           <div>
