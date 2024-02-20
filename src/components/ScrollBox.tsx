@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import {ScrollArea, ScrollBar} from './ui/scroll-area'
+import { ScrollArea, ScrollBar } from "./ui/scroll-area";
 
 interface ScrollBoxProps {
   children: ReactNode;
@@ -8,7 +8,7 @@ interface ScrollBoxProps {
 
 export const ScrollBox = ({ children, className }: ScrollBoxProps) => {
   return (
-    <ScrollArea className={`h-56 bg-stone-600 `} >
+    <ScrollArea className={`h-56 `}>
       {/* <div
         className={
           className +
@@ -17,7 +17,7 @@ export const ScrollBox = ({ children, className }: ScrollBoxProps) => {
          border-l-stone-400`
         }
       > */}
-        {children}
+      {children}
       {/* </div> */}
     </ScrollArea>
   );
