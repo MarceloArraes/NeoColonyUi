@@ -2,13 +2,13 @@ import React, { ReactNode } from "react";
 import { ScrollArea, ScrollBar } from "./ui/scroll-area";
 
 interface ScrollBoxProps {
-  children: ReactNode;
+  children?: ReactNode;
   className?: string;
 }
 
 export const ScrollBox = ({ children, className }: ScrollBoxProps) => {
   return (
-    <ScrollArea className={`h-56 `}>
+    <ScrollArea className={`${className} h-56`}>
       {/* <div
         className={
           className +
@@ -19,6 +19,23 @@ export const ScrollBox = ({ children, className }: ScrollBoxProps) => {
       > */}
       {children}
       {/* </div> */}
+    </ScrollArea>
+  );
+};
+
+export const ScrollBoxExample = ({ children, className }: ScrollBoxProps) => {
+  return (
+    <ScrollArea className={`${className} h-56 w-24`}>
+      <div>
+        <p>
+          Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem
+          ipsumLorem ipsumLorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem
+          ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum Lorem ipsumLorem
+          ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem
+          ipsum
+        </p>
+        {children}
+      </div>
     </ScrollArea>
   );
 };
