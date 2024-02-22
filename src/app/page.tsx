@@ -1,10 +1,11 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { MouseEvent } from "react";
 
 export default function Home() {
-  const goToAlert = () => {
-    window.location.href = "/alert";
+  const goToAlert = (href: string) => {
+    window.location.href = href;
   };
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -15,12 +16,15 @@ export default function Home() {
         width={800}
         height={24}
         priority
+        onClick={() => goToAlert("/menu")}
       />
       <Button variant={"default"}>RED LANDING</Button>
-      <Button variant={"destructive"}>RED LANDING</Button>
-      <Button variant={"outline"}>RED LANDING</Button>
-      <Button variant={"secondary"}>RED LANDING</Button>
-      <Button variant={"darkButton"} onClick={goToAlert} size={"darkButton"}>
+      <Button
+        variant={"darkButton"}
+        onClick={() => goToAlert("/alert")}
+        name="/alert"
+        size={"darkButton"}
+      >
         RED LANDING
       </Button>
     </main>

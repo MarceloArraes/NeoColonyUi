@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        /* className={chakra.className} */ className={`${kodo.className} bg-white`}
+        /* className={chakra.className} */ className={`${kodo.className} bg-white cursor-darkCursor`}
       >
         {children}
       </body>
