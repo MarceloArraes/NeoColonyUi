@@ -1,3 +1,4 @@
+import { Pointer } from "lucide-react";
 import type { Config } from "tailwindcss";
 
 const config = {
@@ -57,7 +58,8 @@ const config = {
         },
       },
       cursor: {
-        darkCursor: "url(/cursor0.svg), pointer",
+        // darkCursor1: "url(/cursor0.png), pointer",
+        darkCursor: "url(/customcursor1.svg) 16 16, pointer",
       },
       keyframes: {
         "accordion-down": {
