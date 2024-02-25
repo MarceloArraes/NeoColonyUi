@@ -47,29 +47,28 @@ export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   asChild?: boolean;
+  goToRoute?: string;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
+  (
+    { className, variant, size, goToRoute = "/", asChild = false, ...props },
+    ref
+  ) => {
     const Comp = asChild ? Slot : "button";
 
-    const [play, { stop }] = useSound("/button.mp3", { volume: 0.5 });
-    // const [isPlaying, setIsPlaying] = useState(false);
-
-    // useEffect(() => {
-    //   if (isPlaying) {
-    //     play();
-    //   } else {
-    //     stop();
-    //   }
-    // }, [isPlaying, play, stop]);
-
+    const [play] = useSound("/sounds/button.mp3", { volume: 0.5 });
+    const [play2] = useSound("/sounds/enterButton.mp3", { volume: 0.3 });
+    const goToLink = (goToRoute: string) => {
+      play();
+      window.location.href = goToRoute;
+    };
     return (
       <Comp
         className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}
-        onMouseEnter={() => play()}
-        // onClick={() => setIsPlaying(!isPlaying)}
+        onMouseEnter={() => play2()}
+        onClick={() => goToLink(goToRoute)}
         {...props}
       />
     );

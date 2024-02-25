@@ -1,11 +1,22 @@
+"use client";
 import { MenuBox } from "@/components/MenuBox";
 import { TextBlock } from "@/components/TextBlock";
 import { Button } from "@/components/ui/button";
 import { ScrollBox } from "@/components/ScrollBox";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
+import useSound from "use-sound";
+// import enteringPage from "../../../public/sounds/enteringPage.mp3";
+import enteringPage from "sounds/enteringPage.mp3";
+import TextAnim from "@/components/TextAnim";
 
 const Menu = () => {
+  const [play] = useSound("/sounds/enteringPage.mp3", { volume: 0.5 });
+  useEffect(() => {
+    // maybe take out this use effect..
+    play();
+  }, [play]);
+
   return (
     <div
       className="flex justify-center items-center h-screen bg-cover bg-fixed bg-slate-800"
@@ -80,9 +91,10 @@ const Menu = () => {
                 </div>
                 <TextBlock>RED LANDING</TextBlock>
                 <ScrollBox className="max-h-56">
-                  <p className="text-sm mb-4 text-green-50 text-left p-2 pr-5">
+                  <span className="text-sm mb-4 text-green-50 text-left p-2 pr-5">
                     <span className="text-blue-600">
                       ...DOWNLOADING TRANSMISSION...
+                      <TextAnim />
                     </span>
                     <br />
                     <br />
@@ -106,7 +118,7 @@ const Menu = () => {
                     There is no time to lose. We are sending you and a small
                     team of <span className="text-yellow-500">TROOPERS</span> to
                     find out what has happened.
-                  </p>
+                  </span>
                 </ScrollBox>
                 <div className="flex justify-end">
                   <Button variant={"darkButton"} size={"darkButton"}>
