@@ -1,11 +1,11 @@
 "use client";
-import dynamic from "next/dynamic";
-import React, { useEffect, useState } from "react";
+// import dynamic from "next/dynamic";
+import React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "../../lib/utils";
 import useSound from "use-sound";
-import buttonSound from "../../sounds/button.mp3";
+// import buttonSound from "../../sounds/button.mp3";
 
 // button.mp3
 
@@ -54,21 +54,22 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const Comp = asChild ? Slot : "button";
 
     const [play, { stop }] = useSound("/button.mp3", { volume: 0.5 });
-    const [isPlaying, setIsPlaying] = useState(false);
+    // const [isPlaying, setIsPlaying] = useState(false);
 
-    useEffect(() => {
-      if (isPlaying) {
-        play();
-      } else {
-        stop();
-      }
-    }, [isPlaying, play, stop]);
+    // useEffect(() => {
+    //   if (isPlaying) {
+    //     play();
+    //   } else {
+    //     stop();
+    //   }
+    // }, [isPlaying, play, stop]);
 
     return (
       <Comp
         className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}
-        onClick={() => setIsPlaying(!isPlaying)}
+        onMouseEnter={() => play()}
+        // onClick={() => setIsPlaying(!isPlaying)}
         {...props}
       />
     );

@@ -23,7 +23,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="cursor-darkCursor">
-      <body className={`${kodo.className} bg-white`}>{children}</body>
+      <body
+        className={`${kodo.className} bg-[#121214] bg-stripes bg-cover bg-no-repeat`}
+      >
+        {children}
+      </body>
     </html>
   );
 }

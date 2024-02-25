@@ -57,6 +57,10 @@ const config = {
           500: "#232323",
         },
       },
+      backgroundImage: {
+        stripes:
+          "linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1) 12.5%, transparent 12.5%, transparent)",
+      },
       cursor: {
         // darkCursor1: "url(/cursor0.png), pointer",
         darkCursor: "url(/customcursor1.svg) 16 16, pointer",
