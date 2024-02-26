@@ -7,13 +7,12 @@ import Image from "next/image";
 import React, { useEffect } from "react";
 import useSound from "use-sound";
 // import enteringPage from "../../../public/sounds/enteringPage.mp3";
-import enteringPage from "sounds/enteringPage.mp3";
+// import enteringPage from "sounds/enteringPage.mp3";
 import TextAnim from "@/components/TextAnim";
 
 const Menu = () => {
   const [play] = useSound("/sounds/enteringPage.mp3", { volume: 0.5 });
   useEffect(() => {
-    // maybe take out this use effect..
     play();
   }, [play]);
 
@@ -90,34 +89,74 @@ const Menu = () => {
                   </div>
                 </div>
                 <TextBlock>RED LANDING</TextBlock>
-                <ScrollBox className="max-h-56">
-                  <span className="text-sm mb-4 text-green-50 text-left p-2 pr-5">
-                    <span className="text-blue-600">
-                      ...DOWNLOADING TRANSMISSION...
-                      <TextAnim />
-                    </span>
+
+                <ScrollBox className="max-h-56 flex text-left p-2 pr-5">
+                  <span className="text-sm mb-4 text-green-50 ">
+                    <TextAnim
+                      text="...DOWNLOADING TRANSMISSION..."
+                      className="text-blue-600"
+                    />
                     <br />
                     <br />
-                    <span className="text-yellow-500">
-                      Welcome to MARS, COMMANDER.
-                    </span>
+                    <TextAnim text="Welcome to" delay={6} />
+                    <TextAnim
+                      text=" MARS, COMMANDER."
+                      className="text-yellow-500"
+                      delay={7}
+                    />
                     <br />
                     <br />
-                    We have just received a distress call from one of our{" "}
-                    <span className="text-yellow-500">
-                      MINING COLONIES
-                    </span>{" "}
-                    deep in the{" "}
-                    <span className="text-yellow-500">CHRYSE BASIN</span>. The
-                    message was very broken up, but as we understand it, the{" "}
-                    <span className="text-yellow-500">COLONY</span> is under
-                    attack by those damn
-                    <span className="text-yellow-500"> ALIENS!</span>
+                    <TextAnim
+                      text="We have just received a distress call from one of our "
+                      delay={9}
+                    />
+                    <TextAnim
+                      text="MINING COLONIES "
+                      delay={16}
+                      className="text-yellow-500"
+                    />
+                    <TextAnim text="deep in the " delay={17} />
+                    <TextAnim
+                      text="CHRYSE BASIN"
+                      delay={19}
+                      className="text-yellow-500"
+                    />
+                    <TextAnim
+                      text=". The
+                      message was very broken up, but as we understand it, the "
+                      delay={20}
+                    />
+                    <TextAnim
+                      text="COLONY "
+                      delay={27}
+                      className="text-yellow-500"
+                    />
+                    <TextAnim
+                      text="is under attack by those damn "
+                      delay={28}
+                    />
+                    <TextAnim
+                      text="ALIENS!"
+                      delay={32}
+                      className="text-yellow-500"
+                    />
                     <br />
                     <br />
-                    There is no time to lose. We are sending you and a small
-                    team of <span className="text-yellow-500">TROOPERS</span> to
-                    find out what has happened.
+                    <TextAnim
+                      text="There is no time to lose. We are sending you and a small
+                      team of "
+                      delay={34}
+                    />
+                    <TextAnim
+                      text="TROOPERS "
+                      delay={39}
+                      className="text-yellow-500"
+                    />
+                    <TextAnim
+                      text="to
+                      find out what has happened."
+                      delay={42}
+                    />
                   </span>
                 </ScrollBox>
                 <div className="flex justify-end">
