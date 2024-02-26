@@ -18,11 +18,14 @@
 - [x] add sounds to the components. (at least to buttons)
   - [ ] Input a menu background sound
   - [ ] Typewritter on texts + sound
-    - [ ] Make typewritter effect fixed to a time each letter (not a time total)
+    - [x] Make typewritter effect fixed to a time each letter (not a time total)
     - [ ] possible solutions:
       - [ ] create a component with all the text hardcoded with html and all...
       - [ ] get free from the string and start to receive ReactNode ooorrr make a initial count that i can keep passing from one to another using some kind of previous string counter.
       - [ ] insert sound for each letter (find sound)
+    - [ ] Make the whole text auto scroll up
+    - [ ] Garantee that the sizes will not change with the new text entering. (fixed size text area?)
+      - [ ] auto scroll when new text apears
   - [x] Sound when entering new page. (look for it first)
   - [x] Sound entering the button and pressing
   - [ ] more...
