@@ -31,6 +31,7 @@ const Menu = () => {
                   <Image
                     src={"/wireframeGlobe1.png"}
                     alt="wireframe globe"
+                    priority
                     width={1200}
                     height={1200}
                     className="aspect-square"
@@ -90,7 +91,7 @@ const Menu = () => {
                 </div>
                 <TextBlock>RED LANDING</TextBlock>
 
-                <ScrollBox className="max-h-56 flex text-left p-2 pr-5">
+                <ScrollBox className="w-96 h-60 text-left p-3 pr-5">
                   <span className="text-sm mb-4 text-green-50 ">
                     <TextAnim
                       text="...DOWNLOADING TRANSMISSION..."

@@ -9,7 +9,7 @@ interface ScrollBoxProps {
 
 export const ScrollBox = ({ children, className }: ScrollBoxProps) => {
   return (
-    <ScrollArea className={`${className} h-56`}>
+    <ScrollArea className={`${className}`}>
       {children}
       {/* </div> */}
     </ScrollArea>
