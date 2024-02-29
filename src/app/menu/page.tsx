@@ -6,6 +6,7 @@ import { ScrollBox } from "@/components/ScrollBox";
 import Image from "next/image";
 import React, { useEffect } from "react";
 import useSound from "use-sound";
+import { ChevronUp } from "lucide-react";
 // import enteringPage from "../../../public/sounds/enteringPage.mp3";
 // import enteringPage from "sounds/enteringPage.mp3";
 import TextAnim from "@/components/TextAnim";
@@ -83,7 +84,12 @@ const Menu = () => {
                       <div className="text-xs">LEUT. CHRYSE BASIN</div>
                     </MenuBox>
                     <MenuBox>
-                      <div className="text-xs"> Rank</div>
+                      <div className="text-xs flex justify-center">
+                        <MenuBox className="flex flex-row">
+                          Rank
+                          <ChevronUp color="#19aabe" strokeWidth={1.25} />
+                        </MenuBox>
+                      </div>
                     </MenuBox>
                     <MenuBox>asd</MenuBox>
                     <MenuBox>asd</MenuBox>
@@ -99,46 +105,46 @@ const Menu = () => {
                     />
                     <br />
                     <br />
-                    <TextAnim text="Welcome to" delay={6} />
+                    <TextAnim text="Welcome to" delay={3} />
                     <TextAnim
                       text=" MARS, COMMANDER."
                       className="text-yellow-500"
-                      delay={7}
+                      delay={4}
                     />
                     <br />
                     <br />
                     <TextAnim
                       text="We have just received a distress call from one of our "
-                      delay={9}
+                      delay={5}
                     />
                     <TextAnim
                       text="MINING COLONIES "
-                      delay={16}
+                      delay={11}
                       className="text-yellow-500"
                     />
-                    <TextAnim text="deep in the " delay={17} />
+                    <TextAnim text="deep in the " delay={12} />
                     <TextAnim
                       text="CHRYSE BASIN"
-                      delay={19}
+                      delay={13}
                       className="text-yellow-500"
                     />
                     <TextAnim
                       text=". The
                       message was very broken up, but as we understand it, the "
-                      delay={20}
+                      delay={14}
                     />
                     <TextAnim
                       text="COLONY "
-                      delay={27}
+                      delay={19}
                       className="text-yellow-500"
                     />
                     <TextAnim
                       text="is under attack by those damn "
-                      delay={28}
+                      delay={20}
                     />
                     <TextAnim
                       text="ALIENS!"
-                      delay={32}
+                      delay={22}
                       className="text-yellow-500"
                     />
                     <br />
@@ -146,17 +152,17 @@ const Menu = () => {
                     <TextAnim
                       text="There is no time to lose. We are sending you and a small
                       team of "
-                      delay={34}
+                      delay={23}
                     />
                     <TextAnim
                       text="TROOPERS "
-                      delay={39}
+                      delay={28}
                       className="text-yellow-500"
                     />
                     <TextAnim
                       text="to
                       find out what has happened."
-                      delay={42}
+                      delay={29}
                     />
                   </span>
                 </ScrollBox>

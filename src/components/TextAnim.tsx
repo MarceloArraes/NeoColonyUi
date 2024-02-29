@@ -1,7 +1,7 @@
 "use client";
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import CursorBlinker from "./CursorBlinker";
-import { ReactNode, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import useSound from "use-sound";
 
 interface TextAnimProps {
