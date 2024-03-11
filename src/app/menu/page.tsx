@@ -4,12 +4,13 @@ import { TextBlock } from "@/components/TextBlock";
 import { Button } from "@/components/ui/button";
 import { ScrollBox } from "@/components/ScrollBox";
 import Image from "next/image";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import useSound from "use-sound";
 import { ChevronUp } from "lucide-react";
 // import enteringPage from "../../../public/sounds/enteringPage.mp3";
 // import enteringPage from "sounds/enteringPage.mp3";
 import TextAnim from "@/components/TextAnim";
+import BablingText from "@/components/BablingText";
 
 const Menu = () => {
   const [play] = useSound("/sounds/enteringPage.mp3", { volume: 0.5 });
@@ -64,6 +65,7 @@ const Menu = () => {
                     <MenuBox>as</MenuBox>
                     <MenuBox>ds</MenuBox>
                     <MenuBox>asss</MenuBox>
+                    <BablingText text="blablabla" />
                   </div>
                 </div>
               </div>
