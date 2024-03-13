@@ -9,6 +9,7 @@ interface TextAnimProps {
   text: string;
   className?: string;
   delay?: number;
+  style?: React.CSSProperties;
   // showBlink?: boolean;
 }
 
@@ -16,6 +17,7 @@ export default function TextAnim({
   text,
   className,
   delay = 0,
+  style,
 }: // showBlink = false,
 TextAnimProps) {
   const [play] = useSound("/sounds/singleTypewrite-trimmed.mp3", {
@@ -50,9 +52,11 @@ TextAnimProps) {
   );
 
   return (
-    <span className="text-green-50">
-      <motion.span className={`${className}`}>{displayText}</motion.span>
+    <>
+      <motion.span style={style} className={`${className}`}>
+        {displayText}
+      </motion.span>
       <CursorBlinker />
-    </span>
+    </>
   );
 }
