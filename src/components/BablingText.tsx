@@ -5,10 +5,10 @@ import { animate, motion, useMotionValue, useTransform } from "framer-motion";
 import TextAnim from "./TextAnim";
 
 interface BablingTextProps {
-  text: string;
-  numberOfCharacters: number;
-  sizeOfString: number;
-  lines: number;
+  text?: string | null;
+  numberOfCharacters?: number;
+  sizeOfString?: number;
+  lines?: number;
 }
 
 function makeRandomText(length: number) {
@@ -30,54 +30,37 @@ function makeRandomText(length: number) {
 // thing in a cartel of animated things to do with the string like in the original darkcolony
 // Have a possible counter with some randoness
 //
-const BablingText = ({ sizeOfString = 5, lines, text }: BablingTextProps) => {
-  const bablingText = useRef(makeRandomText(sizeOfString));
-  const bablingText2 = useRef(makeRandomText(sizeOfString));
-  // const count = useMotionValue(0);
-  //   const playedNumbers = useRef(new Set()).current;
+const BablingText = ({
+  sizeOfString = 5,
+  lines,
+  text = null,
+}: BablingTextProps) => {
+  const splitText1 = text?.slice(0, text.length / 2);
+  const splitText2 = text?.slice(text.length / 2);
 
-  // create random array of characters or numbers
-  // present the text content in two rows
-  // paint it green with opacity
-
-  // useEffect(() => {
-  //   const controls = animate(count, bablingText.current.length, {
-  //     type: "tween",
-  //     duration: bablingText.current.length / 10,
-  //     ease: "easeInOut",
-
-  //     //   delay: delay,
-  //   });
-  //   return controls.stop;
-  // }, [bablingText.current.length, count]);
-
-  // const rounded = useTransform(count, (latest) => Math.round(latest));
-  // const displayText = useTransform(rounded, (latest) =>
-  //   bablingText.current.slice(0, latest)
-  // );
+  const bablingText1 = splitText1 ?? makeRandomText(sizeOfString);
+  const bablingText2 = splitText2 ?? makeRandomText(sizeOfString);
 
   return (
-    <MenuBox className="text-green-400 h-5 w-14">
-      {/* <TextAnim
-        className="-mb-1 p:0"
+    <MenuBox className="text-green-400 flex flex-wrap">
+      <motion.span
+        initial={{ opacity: 1 }}
+        animate={{ opacity: 0.5 }}
+        transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+        className="min-h-[1em] w-auto break-words"
         style={{ fontSize: "8px", lineHeight: "9px" }}
-        text={bablingText.current}
-      ></TextAnim>
-      <TextAnim
-        className="-mb-1"
-        style={{ fontSize: "8px" }}
-        text={bablingText2.current}
-      ></TextAnim> */}
-      <span
-        style={{ fontSize: "8px", lineHeight: "9px", marginBottom: "-2px" }}
-        className="block"
       >
-        ASSf51{" "}
-      </span>
-      <span style={{ fontSize: "8px", lineHeight: "9px" }} className="block">
-        P06554A
-      </span>
-      {/* <motion.span>{text}</motion.span> */}
+        {bablingText1}
+      </motion.span>
+      <motion.span
+        initial={{ opacity: 1 }}
+        animate={{ opacity: 0.5 }}
+        transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+        className="min-h-[1em] w-auto break-words"
+        style={{ fontSize: "8px", lineHeight: "9px" }}
+      >
+        {bablingText2}
+      </motion.span>
     </MenuBox>
   );
 };

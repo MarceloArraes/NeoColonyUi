@@ -87,6 +87,11 @@ const Menu = () => {
                     </MenuBox>
                     <MenuBox>
                       <div className="text-xs flex justify-center">
+                        <BablingText
+                          text={
+                            "35948421354654 6A5S4D65A4SD6 54ASD4A3S1D321S5432132"
+                          } /* numberOfCharacters={35} */
+                        />
                         <MenuBox className="flex flex-row">
                           Rank
                           <ChevronUp color="#19aabe" strokeWidth={1.25} />
