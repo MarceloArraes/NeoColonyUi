@@ -14,7 +14,9 @@
 
 ### Make Components
 
-- [ ] Text component with babling (random letters)
+- [ ] Make crosshair change when hovering and clicking.
+  - [ ] Make some white ilumination on the crosshair to make it more 3d. (as in darkcolony)
+- [x] Text component with babling (random letters)
 - [ ] icon to rank
 - [ ] see if there is a video of the trooper to use it
 - [x] add sounds to the components. (at least to buttons)
