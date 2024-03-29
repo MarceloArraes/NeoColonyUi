@@ -58,6 +58,7 @@ const config = {
         },
       },
       backgroundImage: {
+        moon: "background-image: url('https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004720/lroc_color_poles_1k.jpg') 16 16",
         stripes:
           "linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1) 12.5%, transparent 12.5%, transparent)",
       },

@@ -52,13 +52,9 @@ const Menu = () => {
                       />
                     </MenuBox>
                     <MenuBox>
-                      <Image
-                        alt="Mars"
-                        src={"/mars1.jpg"}
-                        width={70}
-                        height={70}
-                        className="aspect-square"
-                      />
+                      {/* <div className="canvas h-20 w-20"> */}
+                      <div className="moon"></div>
+                      {/* </div> */}
                     </MenuBox>
                   </div>
                   <div className="flex flex-1 flex-col">
