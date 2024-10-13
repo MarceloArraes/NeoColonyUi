@@ -11,14 +11,16 @@ const ScrollArea = React.forwardRef<
   React.ElementRef<typeof ScrollAreaPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof ScrollAreaPrimitive.Root>
 >(({ className, children, ...props }, ref) => {
-  const viewportRef = React.useRef(null);
+  const viewportRef = React.useRef<HTMLDivElement | null>(null);
 
   React.useEffect(() => {
     const scrollArea = viewportRef.current;
     if (!scrollArea) return;
 
     const observer = new MutationObserver(() => {
-      scrollArea.scrollTop = scrollArea.scrollHeight;
+      if (scrollArea) {
+        scrollArea.scrollTop = scrollArea.scrollHeight;
+      }
     });
 
     observer.observe(scrollArea, {
